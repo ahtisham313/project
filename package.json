@@ -2,6 +2,7 @@
   "name": "lady-clothing",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://fa21-bse-072-0692f3063cc0.herokuapp.com/",
   "dependencies": {
     "@material-tailwind/react": "^2.0.1",
     "@testing-library/jest-dom": "^5.16.5",
