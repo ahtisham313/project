@@ -1,17 +1,25 @@
-import axios from "axios";
+import axios from 'axios';
 
-// const url = "https://fa21-bse-072-0692f3063cc0.herokuapp.com";
- const url = "http://localhost:5000";
+const API = axios.create({ baseURL: 'http://localhost:5000' });
+
+// API.interceptors.request.use((req) => {
+//   if (localStorage.getItem('profile')) {
+//     req.headers.Authorization = `Bearer ${
+//       JSON.parse(localStorage.getItem('profile')).token
+//     }`;
+//   }
+// });
+
+const url = 'http://localhost:5000';
 
 export const addApplicant = async (applicantData) => {
   //   console.log("Api Reached");
   console.log(applicantData);
   await axios.post(`${url}/stylady`, applicantData);
 };
-export const addLogin = async (Login) => {
+export const addLogin = (Login) => {
   //   console.log("Api Reached");
-  console.log(Login);
-  await axios.post(`${url}/login`, Login);
+  return axios.post(`${url}/login`, Login);
 };
 export const createProduct = async (product) => {
   //   console.log("Api Reached");
@@ -22,7 +30,6 @@ export const createProduct = async (product) => {
 //   console.log("APII")
 //   await axios.post(`${url}/product`, product)
 // }
-
 
 // import axios from "axios";
 

@@ -9,6 +9,7 @@ const ProductForm = () => {
     description: '',
     price: '',
   });
+  const [user, setUser] = useState(localStorage.getItem('token'));
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -30,14 +31,14 @@ const ProductForm = () => {
     });
   };
 
-  return (
+  return user ? (
     <form onSubmit={handleSubmit}>
       <div>
-        <label htmlFor="id">ID:</label>
+        <label htmlFor='id'>ID:</label>
         <input
-          type="text"
-          id="id"
-          name="id"
+          type='text'
+          id='id'
+          name='id'
           value={product.id}
           onChange={handleChange}
           required
@@ -55,69 +56,45 @@ const ProductForm = () => {
         />
       </div> */}
       <div>
-        <label htmlFor="name">Name:</label>
+        <label htmlFor='name'>Name:</label>
         <input
-          type="text"
-          id="name"
-          name="name"
+          type='text'
+          id='name'
+          name='name'
           value={product.name}
           onChange={handleChange}
           required
         />
       </div>
       <div>
-        <label htmlFor="description">Description:</label>
+        <label htmlFor='description'>Description:</label>
         <input
-          type="text"
-          id="description"
-          name="description"
+          type='text'
+          id='description'
+          name='description'
           value={product.description}
           onChange={handleChange}
         />
       </div>
       <div>
-        <label htmlFor="price">Price:</label>
+        <label htmlFor='price'>Price:</label>
         <input
-          type="text"
-          id="price"
-          name="price"
+          type='text'
+          id='price'
+          name='price'
           value={product.price}
           onChange={handleChange}
           required
         />
       </div>
-      <button type="submit">Submit</button>
+      <button type='submit'>Submit</button>
     </form>
+  ) : (
+    <h1> Please Login to Continue</h1>
   );
 };
 
 export default ProductForm;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // import React, { useState } from "react";
 
@@ -255,4 +232,3 @@ export default ProductForm;
 // };
 
 // export default AddProduct;
-
