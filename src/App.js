@@ -16,7 +16,7 @@ import AddProduct from "./components/AddProduct";
 
 
 // import ProductDesc from "./components/ProductDesc";
-// import CheckOut from "./CheckOut";
+import CheckOut from "./CheckOut";
 
 // import { CartProvider } from './CartContext';
 
@@ -45,7 +45,7 @@ function App() {
 
         {/* <Route path="/productDesc" element={<ProductDesc />} /> */}
 
-        {/* <Route path="/checkout" element={<CheckOut />} /> */}
+        <Route path="/checkout" element={<CheckOut />} />
       </Routes>
       <Footer />
     </div>

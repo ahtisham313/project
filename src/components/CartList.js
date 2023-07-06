@@ -80,11 +80,16 @@ function CartList({ cart }) {
   }, [cart]);
   
   const navigate = useNavigate();
+  
 
   const handleDelete = (index) => {
     const updatedCart = CART.filter((item, i) => i !== index);
     setCART(updatedCart);
   };
+
+  const handlePayButton=()=>{
+    navigate('/checkout');
+  }
 
   return (
     <div>
@@ -136,7 +141,7 @@ function CartList({ cart }) {
         )}
       </p>
 
-      <Button onClick={(e) => navigate("/checkout")}>PAY</Button>
+      <Button onClick={handlePayButton}>PAY</Button>
     </div>
   );
 }

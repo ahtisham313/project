@@ -87,9 +87,9 @@ const navigate =useNavigate();
         <Link to="/addproduct" className="nav-link">
           AddProduct
         </Link>
-        {/* <Link to="/productDesc" className="nav-link">
-          ProductDesc
-        </Link> */}
+        <Link to="/checkout" className="nav-link">
+          checkout
+        </Link>
       </div>
     </div>
   );
